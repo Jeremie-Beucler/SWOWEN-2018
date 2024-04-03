@@ -7,7 +7,7 @@ createGraph <- function(X){
 
   ## Transform the bipartite graph to a unipartite graph by removal of nodes with outdegree = 0
   G.raw       = delete_vertices(G.digraph,igraph::V(G.digraph)[degree(G.digraph,mode = 'out') ==0])
-  G.raw       = simplify(G.raw,remove.multiple = F, remove.loops = T)
+  G.raw       = igraph::simplify(G.raw,remove.multiple = F, remove.loops = T)
 
   return(G.raw)
 }

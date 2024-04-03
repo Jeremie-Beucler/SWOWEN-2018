@@ -54,8 +54,6 @@ G.R123.strong     = compResults.R123$subGraph
 results$R123$removeVertices = compResults.R123$removedVertices
 results$R123$maxSize = compResults.R123$maxSize
 
-
-
 # Write weighted adjacency file
 writeAdjacency(G.R123.strong, paste(output.file,response,sep=''))
 
